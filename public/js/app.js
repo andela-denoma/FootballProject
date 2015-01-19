@@ -1,6 +1,6 @@
 angular.module('football', ['ui.router', 'ngResource', 'footballController', 'footballServices'])
 .config(function ($stateProvider, $locationProvider){
-  $locationProvider.html5mode(true);
+  $locationProvider.html5Mode(true);
   $stateProvider
   .state('forums', {
     url: '/forums',
