@@ -1,0 +1,19 @@
+<form class="form-horizontal" role="form" ng-submit="addTopic()">
+  <div class="form-group">
+  <label for"name" class="col-sm-2 control-label">Headline</label>
+  <div class="col-sm-10">
+    <input type="text" name="headline" ng-model="topic.headline" class="form-control" id="headline" placeholder="Topic Headline Here"/>
+  </div>
+</div>
+  <div class="form-group">
+  <label for"name" class="col-sm-2 control-label">Details</label>
+  <div class="col-sm-10">
+    <input type="text" name="body" ng-model="topic.body" class="form-control" id="body" placeholder="Details Here"/>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" class="btn btn-primary" value="Save"/>
+  </div>
+</div>
+</form>
