@@ -10,8 +10,8 @@ angular.module('footballController', ['footballServices'])
 
   .controller('ForumViewController', function ($scope, $stateParams, ForumService, TopicService, CommentService){
     $scope.forum = ForumService.get({ id: $stateParams.id});
-
-    $scope.comment = function(){
+    $scope.topics = TopicService.query({id: $stateParams.id});
+    
       CommentService.get({id: $stateParams.id})
     };
     $scope.comment;
