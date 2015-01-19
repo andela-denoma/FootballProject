@@ -12,6 +12,14 @@ angular.module('footballController', ['footballServices'])
     $scope.forum = ForumService.get({ id: $stateParams.id});
     $scope.topics = TopicService.query({id: $stateParams.id});
     $scope.comments = CommentService.query({id: $stateParams.id});
+
+    $scope.topic = new TopicService(); 
+    $scope.addTopic = function() {
+      $scope.topic.$save(function(){
+        console.log($scope.topics);
+        $state.go('viewForums');
+      });
+    };
     
   })
 
@@ -42,13 +50,7 @@ angular.module('footballController', ['footballServices'])
   })
 
   .controller('TopicAddController', function ($scope, $state, $stateParams, $window, TopicService) {
-    $scope.topic = new TopicService(); 
-    $scope.addTopic = function() {
-      $scope.topic.$save(function(){
-        console.log($scope.topics);
-        $state.go('viewForums');
-      });
-    };
+   
   
 
     $scope.deleteTopic = function(topic) {

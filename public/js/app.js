@@ -25,7 +25,7 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
   .state('newTopics', {
     url: '/forums/:id/topics/add',
     templateUrl: 'public/view/topic-add.html',
-    controller: 'TopicAddController'})
+    controller: 'ForumViewController'})
   }).run (function ($state) {
     $state.go('forums'); //make a transition to forums state when app starts
   });
