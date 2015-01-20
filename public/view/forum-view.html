@@ -1,19 +1,17 @@
-<table class="table movietable">
-  <tr>
-    <td><h3>{{forum.name}}</h3></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Forum Name</td>
-    <td>{{forum.name}}</td>
-  </tr>
-  <tr ng-repeat="topic in topics">
-      <td>Topic Headline</td>
-      <td>{{topic.headline}}</td>
-      <td>Details</td>
-      <td>{{topic.body}}</td>
-  </tr>
-</table>
+<div class="jumbotron">
+  <h1>{{forum.name}}</h1>
+</div>
+ <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body" ng-repeat="topic in topics">
+    <h4 class="media-heading">{{topic.headline}}</h4>
+    <h5>{{topic.body}}</h5>
+  </div>
+</div>
 <div>
     <a class="btn btn-primary" ui-sref="newTopics({id:forum._id})">Add Topic</a>
 </div>
