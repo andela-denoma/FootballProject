@@ -1,17 +1,10 @@
 <a ui-sref="newForum" class="btn-primary btn-lg nodecoration">Add New Forum</a>
  
-<table class="table forumtable">
-  <tr>
-    <td><h3>Forums</h3></td>
-    <td></td>
-  </tr>
-  <tr ng-repeat="forum in forums">
-    <td>{{forum.name}}</td>
-    <td>{{forum.slogan}}</td>
-    <td>{{forum.country}}</td>
-    <td>
-      <a class="btn btn-primary" ui-sref="viewForum({id:forum._id})">View</a>
-      <a class="btn btn-primary" ui-sref="editForum({id:forum._id})">Edit</a>
-    </td>
-  </tr>
-</table>
+ <div class="jumbotron" ng-repeat="forum in forums">
+     <h1>{{forum.name}}</h1>
+     <p>{{forum.slogan}}</p>
+     <p>{{forum.country}}</p>
+    <div>
+     <a class="btn btn-primary" ui-sref="viewForum({id:forum._id})">View Details</a>
+    </div>
+</div>

@@ -2,6 +2,9 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
 .config(function ($stateProvider, $locationProvider){
   $locationProvider.html5Mode(true);
   $stateProvider
+  .state('home', {
+    url: '/home',
+    templateUrl: 'public/view/home.html'})
   .state('forums', {
     url: '/forums',
     templateUrl: 'public/view/forums.html',
@@ -21,11 +24,11 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
   .state('viewTopics', {
     url: '/forums/:id/topics',
     templateUrl: 'public/view/topics.html',
-    controller: 'TopicController'})
+    controller: 'ForumViewController'})
   .state('newTopics', {
     url: '/forums/:id/topics/add',
     templateUrl: 'public/view/topic-add.html',
     controller: 'ForumViewController'})
   }).run (function ($state) {
-    $state.go('forums'); //make a transition to forums state when app starts
+    $state.go('home'); //make a transition to forums state when app starts
   });
