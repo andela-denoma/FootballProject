@@ -8,8 +8,8 @@ angular.module('footballController', ['footballServices'])
     $scope.getData();
   })
 
-  .controller('ForumViewController', function ($scope, $stateParams, ForumService){
-    $scope.forum = ForumService.get({ name: $stateParams.name});
+  .controller('ForumViewController', function ($scope, $stateParams, TopicService){
+    $scope.forum = TopicService.get({ name: $stateParams.name});
     console.log($scope.forum);
   })
 
