@@ -1,6 +1,6 @@
+<a ui-sref="newTopics({name:forum.name})" class="btn-primary btn-lg nodecoration">Add New Topic</a>
 <div class="jumbotron">
   <h1>{{forum.name}}</h1>
-   <h1>{{forum.slogan}}</h1>
 </div>
  <div class="media">
   <div class="media-left">
@@ -12,7 +12,4 @@
     <h4 class="media-heading">{{forum.topic[0].headline}}</h4>
     <h5>{{forum.topic[0].body}}</h5>
   </div>
-</div>
-<div>
-    <a class="btn btn-primary" ui-sref="newTopics({id:forum._id})">Add Topic</a>
-</div>
+

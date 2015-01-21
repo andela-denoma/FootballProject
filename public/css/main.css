@@ -1,3 +1,14 @@
 body {
-  color: #fff;
+  color: #005b96;
+}
+
+.media-object {
+  height: 50px;
+  width: 50px;
+}
+
+.jumbotron{
+  font-size: 2em;
+  text-align: center;
+  color: blue;
 }
