@@ -17,13 +17,9 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
     templateUrl: 'public/view/forum-view.html',
     controller: 'ForumViewController'})
   .state('editForum', {
-    url: '/forums/:id/edit',
+    url: '/forums/:name/edit',
     templateUrl: 'public/view/forum-edit.html',
     controller: 'ForumEditController'})
-  .state('viewTopics', {
-    url: '/forums/:id/topics',
-    templateUrl: 'public/view/topics.html',
-    controller: 'ForumViewController'})
   }).run (function ($state) {
     $state.go('home'); //make a transition to forums state when app starts
   });
