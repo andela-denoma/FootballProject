@@ -1,17 +1,6 @@
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref="editForum({id:forum.id})">Edit Forum</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
 <div class="jumbotron">
   <h1>{{forum.name}}</h1>
+   <h1>{{forum.slogan}}</h1>
 </div>
  <div class="media">
   <div class="media-left">
@@ -19,9 +8,9 @@
       <img class="media-object" src="..." alt="...">
     </a>
   </div>
-  <div class="media-body" ng-repeat="topic in topics">
-    <h4 class="media-heading">{{topic.headline}}</h4>
-    <h5>{{topic.body}}</h5>
+  <div class="media-body">
+    <h4 class="media-heading">{{forum.topic[0].headline}}</h4>
+    <h5>{{forum.topic[0].body}}</h5>
   </div>
 </div>
 <div>

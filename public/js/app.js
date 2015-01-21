@@ -1,6 +1,5 @@
 angular.module('football', ['ui.router', 'ngResource', 'footballController', 'footballServices'])
-.config(function ($stateProvider, $locationProvider){
-  $locationProvider.html5Mode(true);
+.config(function ($stateProvider){
   $stateProvider
   .state('home', {
     url: '/home',
@@ -14,7 +13,7 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
     templateUrl: 'public/view/forum-add.html',
     controller: 'ForumCreateController'})
   .state('viewForum', {
-    url: '/forums/:id/view',
+    url: '/forums/:name/view',
     templateUrl: 'public/view/forum-view.html',
     controller: 'ForumViewController'})
   .state('editForum', {
