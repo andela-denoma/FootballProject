@@ -1,10 +1,9 @@
 <a ui-sref="newForum" class="btn-primary btn-lg nodecoration">Add New Forum</a>
- 
  <div class="jumbotron" ng-repeat="forum in forums">
      <h1>{{forum.name}}</h1>
      <p>{{forum.slogan}}</p>
      <p>{{forum.country}}</p>
     <div>
-     <a class="btn btn-primary" ui-sref="viewForum({id:forum._id})">View Details</a>
+     <a class="btn btn-primary" ui-sref="viewForum({name:forum.name})">View Details</a>
     </div>
 </div>
