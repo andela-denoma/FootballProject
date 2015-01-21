@@ -20,6 +20,10 @@ angular.module('football', ['ui.router', 'ngResource', 'footballController', 'fo
     url: '/forums/:name/edit',
     templateUrl: 'public/view/forum-edit.html',
     controller: 'ForumEditController'})
+  .state('newTopics', {
+    url: '/forums/:name/edit',
+    templateUrl: 'public/view/topic-add.html',
+    controller: 'ForumEditController'})
   }).run (function ($state) {
     $state.go('home'); //make a transition to forums state when app starts
   });
