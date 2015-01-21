@@ -8,7 +8,7 @@ angular.module('footballServices', [])
   })
   
  .factory('TopicService', function ($resource){
-    return $resource('https://footballcircle.herokuapp.com/forums/:name', {name:@name}, {
+    return $resource('https://footballcircle.herokuapp.com/forums/:name', {name:'@name'}, {
       update: {
       method: 'PUT' // this method issues a PUT request
       }
