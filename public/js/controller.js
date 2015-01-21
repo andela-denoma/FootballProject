@@ -17,6 +17,7 @@ angular.module('footballController', ['footballServices'])
     $scope.forum = new ForumService(); 
     $scope.addForum = function() {
       $scope.forum.$save(function(){
+        $scope.
         $state.go('forums');
       });
     };
